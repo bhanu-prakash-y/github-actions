@@ -1,0 +1,11 @@
+name: contexts demo
+
+# This workflow triggers automatically every time you push code to the repository
+on: [push]
+
+jobs:
+  github-contexts:
+    runs-on: ubuntu-latest    
+    steps:
+      - name: print info 
+        run: echo "${{ toJSON(github) }}"
