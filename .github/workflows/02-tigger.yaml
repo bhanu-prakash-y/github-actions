@@ -1,13 +1,36 @@
 name: Tigger 
 
 # This workflow triggers automatically every time you push code to the repository
-on: workflow_dispatch
-#[push]
+on: 
+  push:
+    branches:
+      - main
+#workflow_dispatch 2 tigger on manual dispatch
+#[push] 1 tigger on push
 
 jobs:
   tigger:    # The type of virtual machine the job will run on  
     runs-on: ubuntu-latest    
     steps:
       # Step 2: Run a standard bash command to print the message
-      - name: manullay dispatch 
-        run: echo "manullay dispatch"
+      - name: main branch push
+        run: echo "main branch push"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
