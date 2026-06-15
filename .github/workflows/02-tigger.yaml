@@ -2,9 +2,15 @@ name: Tigger
 
 # This workflow triggers automatically every time you push code to the repository
 on: 
-  push:
+# if someone opens PR to main branch
+  pull_request:
+    types: [opened, reopened]
     branches:
-      - main
+      - 'releases/**'
+
+  # push:  3 tigger on push to main branch
+  #   branches:
+  #     - main
 #workflow_dispatch 2 tigger on manual dispatch
 #[push] 1 tigger on push
 
@@ -15,16 +21,6 @@ jobs:
       # Step 2: Run a standard bash command to print the message
       - name: main branch push
         run: echo "main branch push"
-
-
-
-
-
-
-
-
-
-
 
 
 
