@@ -1,10 +1,10 @@
-name: contexts demo
+name: Contexts demo
 
 # This workflow triggers automatically every time you push code to the repository
 on: [push]
 
 jobs:
-  github-contexts:
+  github-context:
     runs-on: ubuntu-latest    
     steps:
       - name: print info 
