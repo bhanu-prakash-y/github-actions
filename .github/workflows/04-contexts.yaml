@@ -8,4 +8,7 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
       - name: print info 
-        run: echo "${{ toJson(github) }}"
+        run: |
+          echo "branch name: ${{ github.ref_name }} "
+          echo "event name: ${{ github.event_name }} "
+
