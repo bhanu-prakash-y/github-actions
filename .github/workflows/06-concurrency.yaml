@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest # Github hosted runners
     steps:
       - name: Greet the world
-        run: sleep 60 # The command to execute
+        run: sleep 60  # The command to execute
   
