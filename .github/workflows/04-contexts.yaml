@@ -43,3 +43,14 @@ jobs:
         run: |
           echo "Image name: ${{ steps.tag.outputs.image-name }}"
           echo "Version: ${{ steps.tag.outputs.version }}"
+          
+       # useful with in the job
+      - name: github env
+        run: |
+          echo "Course=github-actions" >> $GITHUB_ENV
+          echo "Duration=5hours" >> $GITHUB_ENV
+
+      - name: print github env
+        run: |
+          echo "Course: $Course"
+          echo "Duration: $Duration"    
